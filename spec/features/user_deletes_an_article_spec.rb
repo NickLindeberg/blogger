@@ -7,7 +7,7 @@ describe 'User Deletes an Article' do
       article_2 = Article.create(title: "Title_2", body: "EVEN Cooler Story Bro")
 
       visit article_path(article_1)
-      click_link
+      click_link "Delete"
 
       expect(current_path).to eq(articles_path)
       expect(page).to have_content(article_2.title)
